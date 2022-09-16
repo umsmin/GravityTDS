@@ -38,6 +38,7 @@ public:
     float getKvalue(); 
     float getTdsValue();
     float getEcValue();
+    float getVoltage();
 
 private:
     int pin;
