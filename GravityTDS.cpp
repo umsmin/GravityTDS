@@ -77,6 +77,7 @@ void GravityTDS::update()
 	this->ecValue=(133.42*this->voltage*this->voltage*this->voltage - 255.86*this->voltage*this->voltage + 857.39*this->voltage)*this->kValue;
 	this->ecValue25  =  this->ecValue / (1.0+0.02*(this->temperature-25.0));  //temperature compensation
 	this->tdsValue = ecValue25 * TdsFactor;
+	this->voltage;
 	if(cmdSerialDataAvailable() > 0)
         {
             ecCalibration(cmdParse());  // if received serial cmd from the serial monitor, enter into the calibration mode
@@ -93,6 +94,10 @@ float GravityTDS::getEcValue()
       return ecValue25;
 }
 
+float GravityTDS::getVoltage()
+{
+	return voltage;
+}
 
 void GravityTDS::readKValues()
 {
