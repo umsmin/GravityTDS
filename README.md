@@ -8,4 +8,4 @@ Now you have
 
 gravityTds.getVoltage();
 
-The sample gives now more informations on serial interface
+The sample gives more informations on serial interface
